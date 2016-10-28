@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'omniauth/openid_connect/version'
+require 'omniauth/kdp2/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "omniauth-openid-connect"
+  spec.name          = "omniauth-kdp2"
   spec.version       = OmniAuth::KDP2::VERSION
-  spec.authors       = ["John Bohn"]
-  spec.email         = ["jjbohn@gmail.com"]
-  spec.summary       = %q{OpenID Connect Strategy for OmniAuth}
-  spec.description   = %q{OpenID Connect Strategy for OmniAuth}
-  spec.homepage      = "https://github.com/jjbohn/omniauth-openid-connect"
+  spec.authors       = ["Stephen Gustafson"]
+  spec.email         = ["stephen.gustafson@tnsglobal.com"]
+  spec.summary       = %q{OpenID Connect KDP2 Strategy for OmniAuth}
+  spec.description   = %q{OpenID Connect KDP2 Strategy for OmniAuth}
+  spec.homepage      = "https://github.com/gustafsons/omniauth-kdp2"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
