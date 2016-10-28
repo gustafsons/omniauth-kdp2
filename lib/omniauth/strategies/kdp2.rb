@@ -7,7 +7,7 @@ require 'openid_connect'
 
 module OmniAuth
   module Strategies
-    class OpenIDConnect
+    class KDP2
       include OmniAuth::Strategy
 
       option :client_options, {
@@ -74,11 +74,11 @@ module OmniAuth
       end
 
       def client
-        @client ||= ::OpenIDConnect::Client.new(client_options)
+        @client ||= ::KDP2::Client.new(client_options)
       end
 
       def config
-        @config ||= ::OpenIDConnect::Discovery::Provider::Config.discover!(options.issuer)
+        @config ||= ::KDP2::Discovery::Provider::Config.discover!(options.issuer)
       end
 
       def request_phase
@@ -140,7 +140,7 @@ module OmniAuth
 
       def issuer
         resource = "#{client_options.scheme}://#{client_options.host}" + ((client_options.port) ? ":#{client_options.port.to_s}" : '')
-        ::OpenIDConnect::Discovery::Provider.discover!(resource).issuer
+        ::KDP2::Discovery::Provider.discover!(resource).issuer
       end
 
       def discover!
@@ -171,7 +171,7 @@ module OmniAuth
       end
 
       def decode_id_token(id_token)
-        ::OpenIDConnect::ResponseObject::IdToken.decode(id_token, public_key)
+        ::KDP2::ResponseObject::IdToken.decode(id_token, public_key)
       end
 
 
