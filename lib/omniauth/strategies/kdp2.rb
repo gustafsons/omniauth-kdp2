@@ -47,9 +47,9 @@ module OmniAuth
 
       info do
         {
-          name: user_info.name,
+          name: user_info.given_name + ' ' + user_info.family_name,
           email: user_info.email,
-          nickname: user_info.preferred_username,
+          nickname: user_info.email,
           first_name: user_info.given_name,
           last_name: user_info.family_name,
           gender: user_info.gender,
@@ -248,4 +248,4 @@ module OmniAuth
   end
 end
 
-OmniAuth.config.add_camelization 'openid_connect', 'OpenIDConnect'
+OmniAuth.config.add_camelization 'kdp2', 'KDP2'
