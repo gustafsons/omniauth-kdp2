@@ -10,7 +10,7 @@ OpenID Connect strategy for OmniAuth
 
 Add this line to your application's Gemfile:
 
-    gem 'omniauth-openid-connect'
+    gem 'omniauth-kdp2'
 
 And then execute:
 
@@ -18,13 +18,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install omniauth-openid-connect
+    $ gem install omniauth-kdp2
 
 ## Usage
 
 Example configuration
 ```ruby
-config.omniauth :openid_connect, {
+config.omniauth :kdp2, {
   name: :my_provider,
   scope: [:openid, :email, :profile, :address],
   response_type: :code,

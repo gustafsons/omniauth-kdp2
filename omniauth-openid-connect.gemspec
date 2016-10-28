@@ -5,7 +5,7 @@ require 'omniauth/openid_connect/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "omniauth-openid-connect"
-  spec.version       = OmniAuth::OpenIDConnect::VERSION
+  spec.version       = OmniAuth::KDP2::VERSION
   spec.authors       = ["John Bohn"]
   spec.email         = ["jjbohn@gmail.com"]
   spec.summary       = %q{OpenID Connect Strategy for OmniAuth}

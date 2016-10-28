@@ -1,5 +1,5 @@
 module OmniAuth
-  module OpenIDConnect
+  module KDP2
     class Error < RuntimeError; end
     class MissingCodeError < Error; end
   end
